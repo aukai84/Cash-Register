@@ -20,48 +20,45 @@ function cashRegister( ) {
  });
    // body...
 
+var button_eight = document.createElement('button');
+button_eight.innerHTML = "8";
+eight.appendChild(button_eight);
+document.getElementById("eight").addEventListener("click",function(){regAdd(8);});
 
+ var button_nine = document.createElement('button');
+ button_nine.innerHTML = "9";
+ nine.appendChild(button_nine);
+ button_nine.addEventListener("click", function(){regAdd(9);});
 
+ var button_four = document.createElement('button');
+ button_four.innerHTML = "4";
+ four.appendChild(button_four);
+ button_four.addEventListener("click", function(){regAdd(4);});
 
-//var button_eight = document.createElement('button');
-//button_eight.innerHTML = "8";
-//eight.appendChild(button_eight);
-//document.getElementById("eight").addEventListener("click",regAdd(8));
+ var button_five = document.createElement('button');
+ button_five.innerHTML = "5";
+ five.appendChild(button_five);
+ button_five.addEventListener("click", function(){regAdd(5);});
 
+ var button_six = document.createElement('button');
+ button_six.innerHTML = "6";
+ six.appendChild(button_six);
+ button_six.addEventListener("click", function(){regAdd(6);});
 
- // var button_nine = document.createElement('button');
- // button_nine.class = 'numbers';
- // button_nine.innerHTML = "9";
- // numbers.appendChild(button_nine);
-//
- // var button_four = document.createElement('button');
- // button_four.class = 'numbers';
- // button_four.innerHTML = "4";
- // numbers.appendChild(button_four);
-//
- // var button_five = document.createElement('button');
- // button_five.class = 'numbers';
- // button_five.innerHTML = "5";
- // numbers.appendChild(button_five);
-//
- // var button_six = document.createElement('button');
- // button_six.class = 'numbers';
- // button_six.innerHTML = "6";
- // numbers.appendChild(button_six);
-//
- // var button_one = document.createElement('button');
- // button_one.class = 'numbers';
- // button_one.innerHTML = "1";
- // numbers.appendChild(button_one);
-//
- // var button_two = document.createElement('button');
- // button_two.class = 'numbers';
- // button_two.innerHTML = "2";
- // numbers.appendChild(button_two);
- // var button_three = document.createElement('button');
- // button_three.class = 'numbers';
- // button_three.innerHTML = "3";
- // numbers.appendChild(button_three);
+ var button_one = document.createElement('button');
+ button_one.innerHTML = "1";
+ one.appendChild(button_one);
+ button_one.addEventListener("click", function(){regAdd(1);});
+
+ var button_two = document.createElement('button');
+ button_two.innerHTML = "2";
+ two.appendChild(button_two);
+ button_two.addEventListener("click", function(){regAdd(2);});
+
+ var button_three = document.createElement('button');
+ button_three.innerHTML = "3";
+ three.appendChild(button_three);
+ button_three.addEventListener("click", function(){regAdd(3);});
 
  function regAdd(x) {
     displayValue = x;
