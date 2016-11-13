@@ -115,4 +115,3 @@
     clearMemory: _clear
    };
  }
-calculatorModule();

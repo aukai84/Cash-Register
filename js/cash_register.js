@@ -1,5 +1,8 @@
 function cashRegister( ) {
 
+  var calculator = calculatorModule();
+  console.log(calculator.load);
+
   var displayValue = 0;
 
   function registerTotal( ) {
@@ -16,49 +19,58 @@ function cashRegister( ) {
  button_seven.innerHTML = "7";
  seven.appendChild(button_seven);
  document.getElementById('seven').addEventListener("click",function () {
-  regAdd(7);
- });
-   // body...
+  regAdd(7); loadNum(7);
+  });
+
+   // body...creating the buttons and used event listners to display the button's value when a button is clicked
 
 var button_eight = document.createElement('button');
 button_eight.innerHTML = "8";
 eight.appendChild(button_eight);
-document.getElementById("eight").addEventListener("click",function(){regAdd(8);});
+document.getElementById("eight").addEventListener("click",function(){regAdd(8); loadNum(8);
+  });
 
  var button_nine = document.createElement('button');
  button_nine.innerHTML = "9";
  nine.appendChild(button_nine);
- button_nine.addEventListener("click", function(){regAdd(9);});
+ button_nine.addEventListener("click", function(){regAdd(9); loadNum(9);
+ });
 
  var button_four = document.createElement('button');
  button_four.innerHTML = "4";
  four.appendChild(button_four);
- button_four.addEventListener("click", function(){regAdd(4);});
+ button_four.addEventListener("click", function(){regAdd(4);loadNum(4);
+ });
 
  var button_five = document.createElement('button');
  button_five.innerHTML = "5";
  five.appendChild(button_five);
- button_five.addEventListener("click", function(){regAdd(5);});
+ button_five.addEventListener("click", function(){regAdd(5); loadNum(5);
+ });
 
  var button_six = document.createElement('button');
  button_six.innerHTML = "6";
  six.appendChild(button_six);
- button_six.addEventListener("click", function(){regAdd(6);});
+ button_six.addEventListener("click", function(){regAdd(6); loadNum(6);
+ });
 
  var button_one = document.createElement('button');
  button_one.innerHTML = "1";
  one.appendChild(button_one);
- button_one.addEventListener("click", function(){regAdd(1);});
+ button_one.addEventListener("click", function(){regAdd(1); loadNum(1);
+ });
 
  var button_two = document.createElement('button');
  button_two.innerHTML = "2";
  two.appendChild(button_two);
- button_two.addEventListener("click", function(){regAdd(2);});
+ button_two.addEventListener("click", function(){regAdd(2); loadNum(2);
+ });
 
  var button_three = document.createElement('button');
  button_three.innerHTML = "3";
  three.appendChild(button_three);
- button_three.addEventListener("click", function(){regAdd(3);});
+ button_three.addEventListener("click", function(){regAdd(3); loadNum(3);
+ });
 
  function regAdd(x) {
     displayValue = x;
@@ -66,9 +78,15 @@ document.getElementById("eight").addEventListener("click",function(){regAdd(8);}
 
   }
 
+function loadNum(x){
+  calculator.load(x);
+  console.log(calculator.getTotal());
 
+}
 
-
+function addNum(x){
+  calculator.add(x);
+}
 
 }
 
