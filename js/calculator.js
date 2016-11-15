@@ -38,9 +38,11 @@
    * Sums the value passed in with `total`
    * @param { Number } x
    */
-  function _add(x) {
+   //updated add function to work with two parameters
+  function _add(x, y) {
     validator(x);
-    _total += x;
+    _total = x + y;
+    return _total;
   }
 
   /**
