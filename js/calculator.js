@@ -69,9 +69,9 @@
    * Divides the value passing in by `total`
    * @param  { Number } x
    */
-   function _divide(x) {
-    validator(x);
-     _total /= x;
+   function _divide(x, y) {
+     _total = x / y;
+     return _total;
    }
 
 

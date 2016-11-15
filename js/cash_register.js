@@ -113,7 +113,7 @@ function loadNum(x){
   var button_divide = document.createElement('button');
   button_divide.innerHTML = '/';
   divide.appendChild(button_divide);
-  button_divide.addEventListener("click", function(){});
+  button_divide.addEventListener("click", function(){operator = "/"; firstNum = displayValue;});
 
   var button_multiply = document.createElement('button');
   button_multiply.innerHTML = '*';
@@ -152,6 +152,9 @@ function loadNum(x){
       displayValue = calculator.multiply(firstNum,displayValue);
       display.innerHTML = displayValue;
       break;
+      case "/" :
+      displayValue = calculator.divide(firstNum,displayValue);
+      display.innerHTML = displayValue;
 
     }
   }
