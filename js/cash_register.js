@@ -126,7 +126,8 @@ function loadNum(x){
   var button_subtract = document.createElement('button');
   button_subtract.innerHTML = '-';
   subtract.appendChild(button_subtract);
-  button_subtract.addEventListener("click", function(){});
+  //click changes operator to - and stores display into firstNum
+  button_subtract.addEventListener("click", function(){operator = "-"; firstNum = displayValue;});
 
   var button_add = document.createElement('button');
   button_add.innerHTML = '+';
@@ -138,7 +139,7 @@ function loadNum(x){
   var button_equals = document.createElement('button');
   button_equals.innerHTML = '=';
   equals.appendChild(button_equals);
-  button_equals.addEventListener("click", function(){calculateEquation("+");});
+  button_equals.addEventListener("click", function(){calculateEquation(operator);});
   //Created function to check operator and which will execute the correct operation - aukai
   function calculateEquation(operator) {
     switch(operator) {
@@ -146,7 +147,12 @@ function loadNum(x){
       displayValue = calculator.add(firstNum,displayValue);
       console.log(firstNum);
       console.log(displayValue);
+      display.innerHTML = displayValue;
       break;
+      case "-" :
+      displayValue = calculator.subtract(firstNum,displayValue);
+      console.log(displayValue);
+      display.innerHTML = displayValue;
 
     }
   }

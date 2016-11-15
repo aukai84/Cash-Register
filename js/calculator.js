@@ -18,7 +18,7 @@
    * @return { Number }    current total
    */
   function _load (x) {
-    validator(x);
+    //validator(x);
     _total = x;
     return _total;
   }
@@ -40,7 +40,7 @@
    */
    //updated add function to work with two parameters
   function _add(x, y) {
-    validator(x);
+   // validator(x,y);
     _total = x + y;
     return _total;
   }
@@ -49,9 +49,11 @@
    * Subtracts the value passed in from `total`
    * @param  { Number } x
    */
-  function _subtract(x) {
-    validator(x);
-    _total -= x;
+   //updated subtract to two parameters and returning a number
+  function _subtract(x, y) {
+    //validator(x,y);
+    _total = x - y;
+    return _total;
    }
 
   /**
@@ -100,11 +102,13 @@
   /**
    * Validation
    */
-   function validator(x) {
-     if (typeof x !== "number") {
-      throw Error();
-     }
-   }
+   //added y to validator
+   //function validator(x,y) {
+   //  if (typeof x !== "number" && typeof y !== "number") {
+   //   throw Error();
+   //  }
+   //}
+
    return {
     load: _load,
     getTotal: _getTotal,
