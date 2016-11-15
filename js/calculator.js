@@ -60,9 +60,9 @@
    * Multiplies the value by `total`
    * @param  { Number } x
    */
-   function _multiply(x) {
-    validator(x);
-     _total *= x;
+   function _multiply(x, y) {
+     _total = x * y;
+     return _total;
    }
 
   /**

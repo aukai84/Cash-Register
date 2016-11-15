@@ -24,58 +24,55 @@ function cashRegister( ) {
 
       // NUMBER BUTTONS <-- using event listeners to display button value on click
 
-      var button_seven = document.createElement('button');
-      button_seven.innerHTML = "7";
-      seven.appendChild(button_seven);
-      document.getElementById('seven').addEventListener("click",function () {
-       loadNum(7);
-      });
+    var button_seven = document.createElement('button');
+     button_seven.innerHTML = "7";
+    seven.appendChild(button_seven);
+    document.getElementById('seven').addEventListener("click",function () {loadNum(7);});
 
      var button_eight = document.createElement('button');
      button_eight.innerHTML = "8";
      eight.appendChild(button_eight);
-     document.getElementById("eight").addEventListener("click",function(){ loadNum(8);
-     });
+     document.getElementById("eight").addEventListener("click",function(){ loadNum(8);});
 
-    //var button_nine = document.createElement('button');
-    //button_nine.innerHTML = "9";
-    //nine.appendChild(button_nine);
-    //button_nine.addEventListener("click", function(){regAdd(9); loadNum(9);});
+    var button_nine = document.createElement('button');
+    button_nine.innerHTML = "9";
+    nine.appendChild(button_nine);
+    button_nine.addEventListener("click", function(){loadNum(9);});
 
-    //var button_four = document.createElement('button');
-    //button_four.innerHTML = "4";
-    //four.appendChild(button_four);
-    //button_four.addEventListener("click", function(){regAdd(4);loadNum(4);});
+    var button_four = document.createElement('button');
+    button_four.innerHTML = "4";
+    four.appendChild(button_four);
+    button_four.addEventListener("click", function(){loadNum(4);});
 
-    //var button_five = document.createElement('button');
-    //button_five.innerHTML = "5";
-    //five.appendChild(button_five);
-    //button_five.addEventListener("click", function(){regAdd(5); loadNum(5);});
+    var button_five = document.createElement('button');
+    button_five.innerHTML = "5";
+    five.appendChild(button_five);
+    button_five.addEventListener("click", function(){loadNum(5);});
 
-    //var button_six = document.createElement('button');
-    //button_six.innerHTML = "6";
-    //six.appendChild(button_six);
-    //button_six.addEventListener("click", function(){regAdd(6); loadNum(6);});
+    var button_six = document.createElement('button');
+    button_six.innerHTML = "6";
+    six.appendChild(button_six);
+    button_six.addEventListener("click", function(){loadNum(6);});
 
-    //var button_one = document.createElement('button');
-    //button_one.innerHTML = "1";
-    //one.appendChild(button_one);
-    //button_one.addEventListener("click", function(){regAdd(1); loadNum(1);});
+    var button_one = document.createElement('button');
+    button_one.innerHTML = "1";
+    one.appendChild(button_one);
+    button_one.addEventListener("click", function(){loadNum(1);});
 
-    //var button_two = document.createElement('button');
-    //button_two.innerHTML = "2";
-    //two.appendChild(button_two);
-    //button_two.addEventListener("click", function(){regAdd(2); loadNum(2);});
+    var button_two = document.createElement('button');
+    button_two.innerHTML = "2";
+    two.appendChild(button_two);
+    button_two.addEventListener("click", function(){loadNum(2);});
 
-    //var button_three = document.createElement('button');
-    //button_three.innerHTML = "3";
-    //three.appendChild(button_three);
-    //button_three.addEventListener("click", function(){regAdd(3); loadNum(3);});
+    var button_three = document.createElement('button');
+    button_three.innerHTML = "3";
+    three.appendChild(button_three);
+    button_three.addEventListener("click", function(){loadNum(3);});
 
-    //var button_zero = document.createElement('button');
-    //button_zero.innerHTML = "0";
-    //zero.appendChild(button_zero);
-    //button_zero.addEventListener("click", function(){regAdd(0); loadNum(0);});
+    var button_zero = document.createElement('button');
+    button_zero.innerHTML = "0";
+    zero.appendChild(button_zero);
+    button_zero.addEventListener("click", function(){loadNum(0);});
 
 
     ///Not sure how to get it to add a double zero. Right now it only prints a single zero. - Coco
@@ -121,12 +118,12 @@ function loadNum(x){
   var button_multiply = document.createElement('button');
   button_multiply.innerHTML = '*';
   multiply.appendChild(button_multiply);
-  button_multiply.addEventListener("click", function(){});
+  button_multiply.addEventListener("click", function(){operator = "*"; firstNum = displayValue;});
 
   var button_subtract = document.createElement('button');
   button_subtract.innerHTML = '-';
   subtract.appendChild(button_subtract);
-  //click changes operator to - and stores display into firstNum
+  //click changes operator to - and stores display into firstNumhello everyone.
   button_subtract.addEventListener("click", function(){operator = "-"; firstNum = displayValue;});
 
   var button_add = document.createElement('button');
@@ -145,23 +142,20 @@ function loadNum(x){
     switch(operator) {
       case "+" :
       displayValue = calculator.add(firstNum,displayValue);
-      console.log(firstNum);
-      console.log(displayValue);
       display.innerHTML = displayValue;
       break;
       case "-" :
       displayValue = calculator.subtract(firstNum,displayValue);
-      console.log(displayValue);
       display.innerHTML = displayValue;
+      break;
+      case "*" :
+      displayValue = calculator.multiply(firstNum,displayValue);
+      display.innerHTML = displayValue;
+      break;
 
     }
   }
 
-
-  function getCalcTotal(){
-    calculator.getTotal();
-    console.log(calculator.getTotal);
-  }
 
 // BUTTONS TO CLEAR, GET BALANCE, DEPOSIT, WITHDRAW
 
