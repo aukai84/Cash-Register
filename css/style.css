@@ -1,6 +1,15 @@
 body{
 	font-family: sans-serif;
-	margin: 10% 0 0 0; padding: 0; box-sizing: border-box;
+	margin: 0; padding: 10% 0; box-sizing: border-box;
+	background-color: #8A8D8F;
+}
+
+h1{
+	font-family: 'Permanent Marker', cursive;
+	text-align: center;
+	margin-top: -7%;
+	margin-bottom: 3%;
+	font-size: 72px;
 }
 
 #displayDiv{
@@ -8,6 +17,7 @@ body{
 	font-size: 24px;
 	border: 2px solid;
 	padding-right: 25px;
+	background-color: white;
 	align-self: stretch;
 	margin: 0 18.25% 1% 20%;
 	order: 1;
@@ -30,13 +40,19 @@ button{
     margin-bottom: 15px;
     flex-grow: 1 2 0 0;
     align-items: stretch;
+    box-shadow: 0 9px #000;
 }
 
 button:hover{
-	background-color: purple;
+	background-color: #BBD1C2;
 	color: #F7F4EE;
 	transition-duration: 0.3s;
 	cursor: pointer;
+}
+
+button:active{
+		box-shadow: 0 5px #000;
+	transform: translateY(4px);
 }
 
 #numbers{
@@ -56,6 +72,11 @@ button:hover{
 	order: 3;
 }
 
+
+#divide:hover button, #multiply:hover button, #subtract:hover button, #add:hover button, #equals:hover button{
+	background-color: #C85534;
+}
+
 #operators{
 	align-items: flex-end;
 	margin-top: -23.90%;
@@ -64,6 +85,11 @@ button:hover{
 
 #clear, #getBalance, #depositCash, #withdrawCash{
 	order: 4;
+}
+
+
+#clear:hover button, #getBalance:hover button, #depositCash:hover button, #withdrawCash:hover button{
+	background-color: #A16A4D;
 }
 
 #register{
