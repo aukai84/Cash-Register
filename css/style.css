@@ -75,16 +75,23 @@ button:active{
 
 #divide:hover button, #multiply:hover button, #subtract:hover button, #add:hover button, #equals:hover button{
 	background-color: #C85534;
+	margin-left: 15px;
+  margin-bottom: 15px;
+
 }
 
 #operators{
 	align-items: flex-end;
 	margin-top: -23.90%;
 	margin-left: 56.75%;
+	margin-right: 0;
+	width: 14%;
+
 }
 
 #clear, #getBalance, #depositCash, #withdrawCash{
 	order: 4;
+	width: 14%;
 }
 
 
