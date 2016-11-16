@@ -8,6 +8,7 @@
  * @return {object} `calculator` object that can be used
  */
  function calculatorModule () {
+
   var _memory = 0;
   var _total = 0;
 
@@ -29,10 +30,10 @@
    * Return the value of `total`
    * @return { Number }
    */
-  function _getTotal() {
+  // function _getTotal() {
 
-   return _total;
-  }
+   // return _total;
+  // }
 
   /**
    * Sums the value passed in with `total`
@@ -81,16 +82,17 @@
    * Return the value stored at `memory`
    * @return { Number }
    */
-   function _getMemory() {
-     return _memory;
-   }
+   // function _getMemory() {
+   //   return _memory;
+   // }
 
   /**
    * Stores the value of `total` to `memory`
    */
-   function _storeTotal( ) {
-      _memory = _total;
-   }
+   // function _storeTotal( ) {
+   //    _memory = _memory + cashReg.register;
+
+   // }
 
 
   /**
@@ -111,13 +113,13 @@
 
    return {
     load: _load,
-    getTotal: _getTotal,
+    //getTotal: _getTotal,
     add: _add,
     subtract: _subtract,
     multiply: _multiply,
     divide: _divide,
-    recallMemory: _getMemory,
-    saveMemory: _storeTotal,
+   // recallMemory: _getMemory,
+   // storeTotal: _storeTotal,
     clearMemory: _clear
    };
  }

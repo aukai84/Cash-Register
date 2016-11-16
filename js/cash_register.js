@@ -1,18 +1,17 @@
+
 function cashRegister( ) {
 
   var calculator = calculatorModule();
-  var displayValue = 0.00;
+  var displayValue = 0;
   var operator = '';
-  console.log(operator);
   var firstNum = 0;
-  var currentTotal = calculator.getTotal();
+  var _memory = 0;
 
 
 
 
-  function registerTotal( ) {
-    var regTotal = _memory;
-  }
+
+
 
 
     //DISPLAY BOX <-- THIS WILL HOLD BUTTON VALUES
@@ -27,52 +26,52 @@ function cashRegister( ) {
     var button_seven = document.createElement('button');
      button_seven.innerHTML = "7";
     seven.appendChild(button_seven);
-    document.getElementById('seven').addEventListener("click",function () {loadNum(7);});
+    document.getElementById('seven').addEventListener("click",function () {_loadNum(7);});
 
      var button_eight = document.createElement('button');
      button_eight.innerHTML = "8";
      eight.appendChild(button_eight);
-     document.getElementById("eight").addEventListener("click",function(){ loadNum(8);});
+     document.getElementById("eight").addEventListener("click",function(){ _loadNum(8);});
 
     var button_nine = document.createElement('button');
     button_nine.innerHTML = "9";
     nine.appendChild(button_nine);
-    button_nine.addEventListener("click", function(){loadNum(9);});
+    button_nine.addEventListener("click", function(){_loadNum(9);});
 
     var button_four = document.createElement('button');
     button_four.innerHTML = "4";
     four.appendChild(button_four);
-    button_four.addEventListener("click", function(){loadNum(4);});
+    button_four.addEventListener("click", function(){_loadNum(4);});
 
     var button_five = document.createElement('button');
     button_five.innerHTML = "5";
     five.appendChild(button_five);
-    button_five.addEventListener("click", function(){loadNum(5);});
+    button_five.addEventListener("click", function(){_loadNum(5);});
 
     var button_six = document.createElement('button');
     button_six.innerHTML = "6";
     six.appendChild(button_six);
-    button_six.addEventListener("click", function(){loadNum(6);});
+    button_six.addEventListener("click", function(){_loadNum(6);});
 
     var button_one = document.createElement('button');
     button_one.innerHTML = "1";
     one.appendChild(button_one);
-    button_one.addEventListener("click", function(){loadNum(1);});
+    button_one.addEventListener("click", function(){_loadNum(1);});
 
     var button_two = document.createElement('button');
     button_two.innerHTML = "2";
     two.appendChild(button_two);
-    button_two.addEventListener("click", function(){loadNum(2);});
+    button_two.addEventListener("click", function(){_loadNum(2);});
 
     var button_three = document.createElement('button');
     button_three.innerHTML = "3";
     three.appendChild(button_three);
-    button_three.addEventListener("click", function(){loadNum(3);});
+    button_three.addEventListener("click", function(){_loadNum(3);});
 
     var button_zero = document.createElement('button');
     button_zero.innerHTML = "0";
     zero.appendChild(button_zero);
-    button_zero.addEventListener("click", function(){loadNum(0);});
+    button_zero.addEventListener("click", function(){_loadNum(0);});
 
 
     ///Not sure how to get it to add a double zero. Right now it only prints a single zero. - Coco
@@ -97,12 +96,12 @@ function cashRegister( ) {
 
 
 // loadNum initialize number to display
-function loadNum(x){
+function _loadNum(x){
   calculator.load(x);
   displayValue = x;
   display.innerHTML = displayValue;
 
-  console.log(calculator.getTotal());
+ console.log(displayValue);
 
 }
 
@@ -136,9 +135,9 @@ function loadNum(x){
   var button_equals = document.createElement('button');
   button_equals.innerHTML = '=';
   equals.appendChild(button_equals);
-  button_equals.addEventListener("click", function(){calculateEquation(operator);});
+  button_equals.addEventListener("click", function(){_calculateEquation(operator);});
   //Created function to check operator and which will execute the correct operation - aukai
-  function calculateEquation(operator) {
+  function _calculateEquation(operator) {
     switch(operator) {
       case "+" :
       displayValue = calculator.add(firstNum,displayValue);
@@ -166,27 +165,45 @@ function loadNum(x){
   var button_clear = document.createElement('button');
   button_clear.innerHTML = 'CLEAR';
   clear.appendChild(button_clear);
-  button_clear.addEventListener("click", function(){clearCalculator();});
+  button_clear.addEventListener("click", function(){_clearCalculator();});
 
-  function clearCalculator(){
-    calculator.clearMemory();
-    console.log(calculator.clearMemory());
+  function _clearCalculator(){
+    display.innerHTML = 0;
+
   }
+
+   function _getMemory() {
+     return _memory;
+   }
+
+  /**
+   * Stores the value of `total` to `memory`
+   */
+   function _storeTotal( ) {
+      _memory = _memory + displayValue;
+
+   }
+
+   function _withdrawCash( ) {
+     _memory = _memory - displayValue;
+   }
 
   var button_getBalance = document.createElement('button');
   button_getBalance.innerHTML = 'GET BALANCE';
   getBalance.appendChild(button_getBalance);
-  button_getBalance.addEventListener("click", function(){});
+  button_getBalance.addEventListener("click", function(){display.innerHTML = _getMemory();});
 
   var button_depositCash = document.createElement('button');
   button_depositCash.innerHTML = 'DEPOSIT CASH';
   depositCash.appendChild(button_depositCash);
-  button_depositCash.addEventListener("click", function(){});
+  button_depositCash.addEventListener("click", function(){_storeTotal();});
+
 
   var button_withdrawCash = document.createElement('button');
   button_withdrawCash.innerHTML = 'WITHRDRAW CASH';
   withdrawCash.appendChild(button_withdrawCash);
-  button_withdrawCash.addEventListener("click", function(){});
+  button_withdrawCash.addEventListener("click", function(){_withdrawCash();});
+
 
 }
 
