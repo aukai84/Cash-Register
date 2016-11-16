@@ -1,6 +1,6 @@
 body{
 	font-family: sans-serif;
-	margin: 0; padding: 0; box-sizing: border-box;
+	margin: 10% 0 0 0; padding: 0; box-sizing: border-box;
 }
 
 #displayDiv{
@@ -8,8 +8,10 @@ body{
 	font-size: 24px;
 	border: 2px solid;
 	padding-right: 25px;
-	align-self: center;
-	margin: 0 20%;
+	align-self: stretch;
+	margin: 0 18.25% 1% 20%;
+	order: 1;
+	flex: 2 1 0 0;
 }
 
 button{
@@ -17,11 +19,17 @@ button{
     border: none;
     border-radius: 6px;
     color: #000000;
-    padding: 15px 32px;
+    padding: 15px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 18px;
+    height: 100px;
+    width: 225px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    flex-grow: 1 2 0 0;
+    align-items: stretch;
 }
 
 button:hover{
@@ -36,41 +44,31 @@ button:hover{
 	justify-content: flex-start;
 	flex-direction: column;
 	align-items: flex-start;
-	margin: 0 20%;
+	margin-left: 19.25%;
 }
 
 #seven, #eight, #nine, #four, #five, #six, #one, #two, #three, #zero, #dblZero, #decimal{
 	float: left;
-	margin-top: 2%;
-}
-
-#row1{
-	order: 1;
-}
-
-#row2{
 	order: 2;
 }
 
-#row3{
+#divide, #multiply, #subtract, #add, #equals{
 	order: 3;
 }
 
-#row4{
+#operators{
+	align-items: flex-end;
+	margin-top: -23.90%;
+	margin-left: 56.75%;
+}
+
+#clear, #getBalance, #depositCash, #withdrawCash{
 	order: 4;
 }
 
-#operators{
-	align-self: center;
-	margin-left: 3%;
-	margin-top: -40%;
-	order:5;
-}
-
 #register{
-	align-self: center;
-	margin-left: 58%;
-	margin-top: -47%;
-	order:6;
+	align-items: flex-end;
+	margin-top: -29.90%;
+	margin-left: 69.25%;
 }
 
