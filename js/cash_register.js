@@ -167,9 +167,10 @@ function _loadNum(x){
   clear.appendChild(button_clear);
   button_clear.addEventListener("click", function(){_clearCalculator();});
 
+  
+
   function _clearCalculator(){
     display.innerHTML = 0;
-
   }
 
    function _getMemory() {
@@ -203,6 +204,7 @@ function _loadNum(x){
   button_withdrawCash.innerHTML = 'WITHRDRAW CASH';
   withdrawCash.appendChild(button_withdrawCash);
   button_withdrawCash.addEventListener("click", function(){_withdrawCash();});
+
 
 
 }
