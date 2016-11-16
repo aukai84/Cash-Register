@@ -36,7 +36,7 @@ button{
 	order: 1;
 }
 
-#seven, #eight, #nine, #four, #five, #six, #one, #two, #three{
+#seven, #eight, #nine, #four, #five, #six, #one, #two, #three, #zero, #dblZero, #decimal{
 	float: left;
 }
 
@@ -55,6 +55,20 @@ button{
 #row4{
 /*	float: left;*/
 	margin-top: 150px;
+	order: 4;
 }
 
+#operators{
+/*	flex-direction: column;*/
+	margin-left: 225px;
+	margin-top: -150px;
+	order:5;
+}
+
+#register{
+/*	flex-direction: column-reverse;*/
+	margin-left: 300px;
+	margin-top: -240px;
+	order:6;
+}
 

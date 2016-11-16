@@ -75,17 +75,17 @@ function cashRegister( ) {
 
 
     ///Not sure how to get it to add a double zero. Right now it only prints a single zero. - Coco
-    //var button_dblZero = document.createElement('button');
-    //button_dblZero.innerHTML = "00";
-    //dblZero.appendChild(button_dblZero);
-    //button_dblZero.addEventListener("click", function(){regAdd(0); loadNum(0);});
+    var button_dblZero = document.createElement('button');
+    button_dblZero.innerHTML = "00";
+    dblZero.appendChild(button_dblZero);
+    button_dblZero.addEventListener("click", function(){});
 
     ///Created a decimal button, however, I'm not sure how to execute a decimal using the current function. I get a throw error so I thought I could do number || string to allow the '.' to pass but it still showed up as an error - Coco
 
-    //var button_decimal = document.createElement('button');
-    //button_decimal.innerHTML = ".";
-    //decimal.appendChild(button_decimal);
-    //button_decimal.addEventListener("click", function(){regAdd(0); loadNum(0);});
+    var button_decimal = document.createElement('button');
+    button_decimal.innerHTML = ".";
+    decimal.appendChild(button_decimal);
+    button_decimal.addEventListener("click", function(){});
 
 
 //FUNCTIONS USED TO GRAB CURRENT TOTAL, LOAD CURRENT TOTAL INTO DISPLAY
