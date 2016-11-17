@@ -9,8 +9,8 @@
  */
  function calculatorModule () {
 
-  var _memory = 0;
-  var _total = 0;
+  //var _memory = 0;
+  //var _total = 0;
 
 
   /**
@@ -18,11 +18,11 @@
    * @param  { Number } x
    * @return { Number }    current total
    */
-  function _load (x) {
-    //validator(x);
-    _total = x;
-    return _total;
-  }
+ // function _load (x) {
+ //   //validator(x);
+ //   _total = x;
+ //   return _total;
+ // }
 
 
 
@@ -98,9 +98,9 @@
   /**
    * Clear the value stored at `memory`
    */
-   function _clear() {
-     _memory = 0;
-   }
+  // function _clear() {
+  //   _memory = 0;
+  // }
   /**
    * Validation
    */
@@ -112,7 +112,7 @@
    //}
 
    return {
-    load: _load,
+    //load: _load,
     //getTotal: _getTotal,
     add: _add,
     subtract: _subtract,
@@ -120,6 +120,6 @@
     divide: _divide,
    // recallMemory: _getMemory,
    // storeTotal: _storeTotal,
-    clearMemory: _clear
+   // clearMemory: _clear
    };
  }
