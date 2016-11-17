@@ -6,7 +6,7 @@ function cashRegister( ) {
   var operator = '';
   var firstNum = '';
   var secondNum = '';
-  var _memory = '';
+  var _memory = 0;
 //set global variables to equal empty strings
 
 
@@ -93,34 +93,34 @@ function cashRegister( ) {
 
 
 // loadNum initialize number to display
-function _loadNum(x){
-  calculator.load(x);
-  displayValue += x;
-  display.innerHTML = displayValue;
+  function _loadNum(x){
+    //calculator.load(x);
+    displayValue += x;
+    display.innerHTML = displayValue;
 
- console.log(displayValue);
+  console.log(displayValue);
 
-}
+  }
 
   //OPERATION BUTTONS
 
   //Moved the operating buttons outside of first child scope to avoid possible malfunction -Coco
 
   var button_divide = document.createElement('button');
-button_divide.innerHTML = '/';
-divide.appendChild(button_divide);
-button_divide.addEventListener("click", function(){_loadNum("/"); operator = "/"; firstNum = displayValue; secondNum = '';});
+  button_divide.innerHTML = '/';
+  divide.appendChild(button_divide);
+  button_divide.addEventListener("click", function(){_loadNum("/"); operator = "/"; firstNum = displayValue; secondNum = '';});
 
-var button_multiply = document.createElement('button');
-button_multiply.innerHTML = '*';
-multiply.appendChild(button_multiply);
-button_multiply.addEventListener("click", function(){_loadNum("*"); operator = "*"; firstNum = displayValue; secondNum = '';});
+  var button_multiply = document.createElement('button');
+  button_multiply.innerHTML = '*';
+  multiply.appendChild(button_multiply);
+  button_multiply.addEventListener("click", function(){_loadNum("*"); operator = "*"; firstNum = displayValue; secondNum = '';});
 
-var button_subtract = document.createElement('button');
-button_subtract.innerHTML = '-';
-subtract.appendChild(button_subtract);
-//click changes operator to - and stores display into firstNumhello everyone.
-button_subtract.addEventListener("click", function(){_loadNum("-"); operator = "-"; firstNum = displayValue; secondNum = '';});
+  var button_subtract = document.createElement('button');
+  button_subtract.innerHTML = '-';
+  subtract.appendChild(button_subtract);
+  //click changes operator to - and stores display into firstNumhello everyone.
+  button_subtract.addEventListener("click", function(){_loadNum("-"); operator = "-"; firstNum = displayValue; secondNum = '';});
 
   var button_add = document.createElement('button');
   button_add.innerHTML = '+';
