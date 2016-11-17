@@ -27,12 +27,12 @@ function cashRegister( ) {
   var button_seven = document.createElement('button');
   button_seven.innerHTML = "7";
   seven.appendChild(button_seven);
-    document.getElementById('seven').addEventListener("click",function () {_loadNum("7"); secondNum += "7";});
+  button_seven.addEventListener("click",function () {_loadNum("7"); secondNum += "7";});
 
   var button_eight = document.createElement('button');
   button_eight.innerHTML = "8";
   eight.appendChild(button_eight);
-  document.getElementById("eight").addEventListener("click",function(){ _loadNum("8"); secondNum += "8";});
+  button_eight.addEventListener("click",function(){ _loadNum("8"); secondNum += "8";});
 
   var button_nine = document.createElement('button');
   button_nine.innerHTML = "9";
