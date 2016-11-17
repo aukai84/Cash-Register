@@ -53,7 +53,7 @@
    //updated subtract to two parameters and returning a number
   function _subtract(x, y) {
     //validator(x,y);
-    _total = x - y;
+    _total = parseFloat(x) -parseFloat(y);
     return _total;
    }
 
@@ -62,7 +62,7 @@
    * @param  { Number } x
    */
    function _multiply(x, y) {
-     _total = x * y;
+     _total = parseFloat(x) * parseFloat(y);
      return _total;
    }
 
@@ -71,7 +71,7 @@
    * @param  { Number } x
    */
    function _divide(x, y) {
-     _total = x / y;
+     _total = parseFloat(x) / parseFloat(y);
      return _total;
    }
 
