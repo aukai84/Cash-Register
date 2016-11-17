@@ -6,7 +6,7 @@ function cashRegister( ) {
   var operator = '';
   var firstNum = '';
   var secondNum = '';
-  var _memory = 0;
+  var _memory = '';
 //set global variables to equal empty strings
 
 
@@ -17,22 +17,22 @@ function cashRegister( ) {
 
     //DISPLAY BOX <-- THIS WILL HOLD BUTTON VALUES
 
-    var display = document.createElement('p');
-    display.id = "display";
-    display.innerHTML = displayValue;
-    displayDiv.appendChild(display);
+  var display = document.createElement('p');
+  display.id = "display";
+  display.innerHTML = displayValue;
+  displayDiv.appendChild(display);
 
       // NUMBER BUTTONS <-- using event listeners to display button value on click
       //all butons load string numbers into the display
-    var button_seven = document.createElement('button');
-     button_seven.innerHTML = "7";
-    seven.appendChild(button_seven);
+  var button_seven = document.createElement('button');
+  button_seven.innerHTML = "7";
+  seven.appendChild(button_seven);
     document.getElementById('seven').addEventListener("click",function () {_loadNum("7"); secondNum += "7";});
 
-     var button_eight = document.createElement('button');
-     button_eight.innerHTML = "8";
-     eight.appendChild(button_eight);
-     document.getElementById("eight").addEventListener("click",function(){ _loadNum("8"); secondNum += "8";});
+  var button_eight = document.createElement('button');
+  button_eight.innerHTML = "8";
+  eight.appendChild(button_eight);
+  document.getElementById("eight").addEventListener("click",function(){ _loadNum("8"); secondNum += "8";});
 
   var button_nine = document.createElement('button');
   button_nine.innerHTML = "9";
@@ -62,7 +62,7 @@ function cashRegister( ) {
   var button_two = document.createElement('button');
   button_two.innerHTML = "2";
   two.appendChild(button_two);
-  button_two.addEventListener("click", function(){_loadNum("2"); secondNum += "2"});
+  button_two.addEventListener("click", function(){_loadNum("2"); secondNum += "2";});
 
   var button_three = document.createElement('button');
   button_three.innerHTML = "3";
@@ -141,15 +141,15 @@ button_subtract.addEventListener("click", function(){_loadNum("-"); operator = "
       display.innerHTML = displayValue;
       break;
       case "-" :
-      displayValue = calculator.subtract(firstNum,displayValue);
+      displayValue = calculator.subtract(firstNum,secondNum);
       display.innerHTML = displayValue;
       break;
       case "*" :
-      displayValue = calculator.multiply(firstNum,displayValue);
+      displayValue = calculator.multiply(firstNum,secondNum);
       display.innerHTML = displayValue;
       break;
       case "/" :
-      displayValue = calculator.divide(firstNum,displayValue);
+      displayValue = calculator.divide(firstNum,secondNum);
       display.innerHTML = displayValue;
 
     }
@@ -179,12 +179,12 @@ button_subtract.addEventListener("click", function(){_loadNum("-"); operator = "
    * Stores the value of `total` to `memory`
    */
    function _storeTotal( ) {
-      _memory = _memory + displayValue;
+      _memory = _memory + parseFloat(displayValue);
 
    }
 
    function _withdrawCash( ) {
-     _memory = _memory - displayValue;
+     _memory = _memory - parseFloat(displayValue);
    }
 
   var button_getBalance = document.createElement('button');
