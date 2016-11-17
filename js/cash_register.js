@@ -179,12 +179,12 @@ function cashRegister( ) {
    * Stores the value of `total` to `memory`
    */
    function _storeTotal( ) {
-      _memory = _memory + parseFloat(displayValue);
+      _memory += parseFloat(displayValue);
 
    }
 
    function _withdrawCash( ) {
-     _memory = _memory - parseFloat(displayValue);
+     _memory -= parseFloat(displayValue);
    }
 
   var button_getBalance = document.createElement('button');
