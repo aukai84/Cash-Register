@@ -42,7 +42,7 @@
    //updated add function to work with two parameters
   function _add(x, y) {
    // validator(x,y);
-    _total = x + y;
+    _total = parseFloat(x) + parseFloat(y);
     return _total;
   }
 
